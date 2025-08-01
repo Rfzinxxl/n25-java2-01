@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.secao03.aula04;
+
+public class Chickens2 {
+
+	public static void main(String[] args) {
+		double dailyAverage = 0, monthlyAverage = 0, monthlyProfit = 0;
+
+      System.out.println("Daily Average:   " +dailyAverage);
+      System.out.println("Monthly Average: " +monthlyAverage);
+      System.out.println("Monthly Profit:  $" +monthlyProfit);
+
+	}
+
+}
