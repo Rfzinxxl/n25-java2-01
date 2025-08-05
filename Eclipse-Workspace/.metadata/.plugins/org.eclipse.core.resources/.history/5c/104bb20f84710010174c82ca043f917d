@@ -1,0 +1,15 @@
+package br.com.senaisp.bauru.secao03.aula05;
+
+public class ShoppingCart01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Montar a mensagem
+		String custName, itemDesc;
+		String message = custName + "quer comprar" + "um(a)" + " " + itemDesc;
+		System.out.println(message);
+
+	}
+
+}

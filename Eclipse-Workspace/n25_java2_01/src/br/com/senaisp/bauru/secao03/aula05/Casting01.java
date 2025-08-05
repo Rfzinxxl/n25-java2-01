@@ -1,0 +1,15 @@
+package br.com.senaisp.bauru.secao03.aula05;
+
+public class Casting01 {
+
+	public static void main(String[] args) {
+		//byte bVlr = 128;
+		short sVlr = 128;
+		System.out.println("isso vai dar erro: " + ((byte)sVlr));
+		byte bVlr = 127;
+		bVlr++;
+		System.out.println("isso vai dar erro: " + bVlr);
+
+	}
+
+}
