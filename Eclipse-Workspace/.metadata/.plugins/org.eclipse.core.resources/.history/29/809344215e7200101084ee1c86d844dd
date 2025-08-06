@@ -1,0 +1,37 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		
+		JOptionPane.showConfirmDialog(null,
+                "Olá,participante, e bem-vindo ao programa de namoro favorito da América!",
+                "Bem-vindo, participante!",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE);
+		
+		String questao1 = (String)JOptionPane.showInputDialog(null,
+                "Qual é seu nome?",
+                "Questão 1",
+                JOptionPane.QUESTION_MESSAGE ,
+                null,
+                null,
+                "String"
+                );
+		
+		 String[] acceptableValues = {"Palmeiras", "Noroeste", "Manchester United 2008", "Real Madri 2018", "Paysandu", "Vila Nova"};
+	        String questao2 = (String)JOptionPane.showInputDialog(null,
+	                "Qual seu time favorito?",
+	                "Questão 2",
+	                2,
+	                null,
+	                acceptableValues,
+	                acceptableValues[1]);
+
+		
+
+	}
+
+}

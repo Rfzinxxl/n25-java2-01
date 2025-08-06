@@ -1,0 +1,17 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		String[] acceptableValues = {"Choice 1", "Choice 2", "Choice 3"};
+		Input2 string= (String)JOptionPane.showInputDialog(null,
+		"Olá,participante, e bem-vindo ao programa de namoro favorito da américa!",
+		"Bem-vindo, participante!",
+		2,
+		null,
+		acceptableValues,
+		acceptableValues[1]);
+
+	}
+
+}
