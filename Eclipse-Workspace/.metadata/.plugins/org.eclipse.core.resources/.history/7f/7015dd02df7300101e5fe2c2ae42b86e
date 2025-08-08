@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.secao04.aula08;
+
+public class Calculadora {
+	//Propriedades - Campos
+	private double imposto;
+	private double comissao;
+	//Constructor
+	public Calculadora() {
+		imposto = 5;
+		comissao = 15;
+	}
+}

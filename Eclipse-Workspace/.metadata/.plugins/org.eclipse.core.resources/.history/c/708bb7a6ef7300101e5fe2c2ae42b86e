@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.secao04.aula08;
+
+import javax.swing.JOptionPane;
+
+public class NameMaker {
+
+	public static void main(String[] args) {
+		String fistName = JOptionPane.showInputDialog("Digite seu Primeiro nome:");
+		String middleName = JOptionPane.showInputDialog("Digite seu Segundo nome:");
+		String lastName = JOptionPane.showInputDialog("Digite seu Ultimo nome:");
+
+	}
+
+}
