@@ -1,0 +1,13 @@
+package br.com.senaisp.bauru.secao04.aula10;
+
+public class CalculoBaskara {
+	private double ladoA;
+	private double ladoB;
+	private double ladoC;
+	private double x1;
+	private double x2;
+	public CalculoBaskara() {
+		ladoA = 0;
+	}
+
+}

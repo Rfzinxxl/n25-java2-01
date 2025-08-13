@@ -40,4 +40,28 @@ public class Forca {
 				(erros>=6 ? "\\" : " ") + "\n" + " |\n" + "===" + getPalavraMascarada() + "\n";
 		return linha;
 	}
+	public void lancarLetra(char letra) {
+		if (palavraSecreta.contains((""+letra).toLowerCase())) {
+			String apoio="";
+			for (int i=0;i<palavraSecreta.length();i++) {
+				if((""+letra).toLowerCase().equals(""+palavraSecreta.charAt(i))){
+					apoio += palavraSecreta.charAt(i);
+				} else {
+					apoio += palavraMascarada.charAt(i);
+					
+				}
+			}
+			palavraMascarada = "" + apoio;
+			
+		} else {
+			erros++;
+			System.out.println("A letra" + letra + "não está no texto!");
+		}
+	}
+	public boolean ehFimDeJogo() {
+		return erros>=6 || !palavraMascarada.contains("_");
+	}
+	public String getPalavraRevelada() {
+		return ehFimDeJogo() ? palavraSecreta : "";
+	}
 }
