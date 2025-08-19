@@ -1,0 +1,11 @@
+package br.com.senaisp.bauru.secao08.aula13;
+
+import java.util.ArrayList;
+
+import br.com.senaisp.bauru.secao05.aula11.Carta;
+
+public class BlackJackPlayer {
+	private String nome;
+	private ArrayList<Carta> cartas;
+
+}
