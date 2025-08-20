@@ -1,0 +1,10 @@
+package br.com.senaisp.bauru.secao08.aula14;
+
+public class BlackJackGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

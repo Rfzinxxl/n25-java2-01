@@ -1,0 +1,29 @@
+package br.com.senaisp.bauru.secao08.aula14;
+
+import java.util.ArrayList;
+
+import br.com.senaisp.bauru.secao08.aula13.Baralho;
+import br.com.senaisp.bauru.secao08.aula13.BlackJackPlayer;
+
+public class BlackJackGame {
+	private Baralho bar;
+	private ArrayList<BlackJackPlayer> players;
+	private boolean fimJogo;
+	private int turnoPlayer;
+	
+	public BlackJackGame() {
+		bar = new Baralho();
+		players = new ArrayList<BlackJackPlayer>();
+		fimJogo = false;
+		turnoPlayer = 1;
+		
+		BlackJackPlayer banca= new BlackJackPlayer();
+		banca.setNome("Banca");
+		
+		Players.add(banca);
+		
+		banca.getCartas().add(bar.sortearCarta());
+		banca.getCartas().add(bar.sortearCarta());
+	}
+
+}
