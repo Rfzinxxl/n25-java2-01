@@ -1,0 +1,15 @@
+package br.com.senaisp.bauru.secao08.aula15;
+
+public class PessoaTest {
+
+	public static void main(String[] args) {
+		Pessoa pe01 = new Pessoa();
+		Pessoa pe02 = new Pessoa();
+		pe01.setNome("Joao pé de feijão");
+		pe01.setEndereco("Ruadas Ruas, 1234");
+		pe01.setDocumento("123.456.789-09");
+		pe01.setDataNascimento("20/05/1999");
+		System.out.println(pe01);
+	}
+
+}
