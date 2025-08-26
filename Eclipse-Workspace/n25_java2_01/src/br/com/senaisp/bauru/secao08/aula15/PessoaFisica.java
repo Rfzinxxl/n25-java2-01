@@ -15,4 +15,9 @@ public class PessoaFisica extends Pessoa {
 		// TODO Auto-generated method stub
 		return documento2.length()==14 || documento2.length()==11;
 	}
+	@Override
+	protected boolean isEnderecoValido(String endereco2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

@@ -5,7 +5,7 @@ public class PessoaJuridica extends Pessoa {
 		super();
 		setTipoPessoa('J');
 	}
-	public PessoaJuridica (String nom, String doc, String ende, String dtNas) {
+	public PessoaJuridica (String nom, String doc, String ende, String dtNas) throws DocumentoException, EnderecoException {
 	super(nom, doc, ende, dtNas);
 	setTipoPessoa('J');
 
@@ -14,5 +14,10 @@ public class PessoaJuridica extends Pessoa {
 	protected boolean isDocumentoValido(String documento2) {
 		// 12.345.678/0001-00
 		return documento2.length()==18 || documento2.length()==14;
+	}
+	@Override
+	protected boolean isEnderecoValido(String endereco2) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
