@@ -42,6 +42,9 @@ public class ConectorBancoDados {
 	public String getConnStr() {
 		return connStr;
 	}
+	public Connection getConnection() {
+		return conn;
+	}
 	}
 
 
