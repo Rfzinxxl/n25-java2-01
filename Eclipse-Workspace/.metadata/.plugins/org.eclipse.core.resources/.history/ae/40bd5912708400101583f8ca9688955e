@@ -1,0 +1,80 @@
+package br.com.senaisp.bauru.raphael.classes;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class CadastramentoProduto {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int op;
+		do {
+			System.out.println("Sistema de Conrole de Produtos");
+			System.out.println("1 - Cadastrar um produto");
+			System.out.println("2 - Listar produtos");
+			System.out.println("3 - Consultar um produto");
+			System.out.println("4 - Alterar um produto");
+			System.out.println("5 - Excluir um produto");
+			System.out.println("9 - Fim");
+			System.out.println("Escolha sua opção: ");
+			try {
+				op = sc.nextInt();
+			}catch(InputMismatchException e) {
+				op=0;
+				sc.nextLine();
+			}
+			switch(op) {
+			case 1 -> cadastarProduto(sc);
+			case 2 -> listarProdutos(sc);
+			case 3 -> consultarProduto(sc);
+			case 4 -> alterarProduto(sc);
+			case 5 -> excluirProduto(sc);
+			case 9 -> System.out.println("Até mais!");
+			default -> System.out.println("Opção inválida!!!");
+			
+			}
+		}while (op != 9 );
+	}
+
+	private static Object excluirProduto(Scanner sc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Object alterarProduto(Scanner sc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Object consultarProduto(Scanner sc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Object listarProdutos(Scanner sc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static void cadastarProduto(Scanner sc) {
+		System.out.println("cadastramento de produto");
+		do {
+			
+		
+		try {
+			if(sc.hasNext()) sc.nextLine();
+			
+			System.out.println("Digite a descrição: ");
+			String desc = sc.nextLine();
+			
+			System.out.println("Digite a saldo: ");
+			double saldo = sc.nextDouble();
+			
+			System.out.println("Digite a preço: ");
+			double preco = sc.nextDouble();
+		} catch (InputMismatchException e) {
+			System.out.println("Por favor, digite somente números!");
+		}
+		}while(true);
+	}
+
+}

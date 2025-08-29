@@ -14,20 +14,20 @@
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.secao08.aula15.PessoaFisica"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.secao08.aula15.PessoaJuridica"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.secao08.aula15.EnderecoException"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.raphael.test.ConectorBancoDadosTest"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="br.com.senaisp.bauru.raphael.classes.ConectorBancoDados"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="jdk.internal.jimage.decompressor.SignatureParser.ParseResult"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.raphael.classes.Produto"/>
+    <fullyQualifiedTypeName name="br.com.senaisp.bauru.raphael.classes.ConectorBancoDados"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 </qualifiedTypeNameHistroy>

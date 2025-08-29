@@ -61,7 +61,47 @@ public class Produto {
 	private void setId(int value) {
 		id = value;
 	}
-	public static Produto create(String descricao, double saldo, double preco) throws SQLException {
+	public void atualizarBanco() {
+		String sql = "update produto set descricao=? , " + "saldo = ?, preco = ? where id = ?";
+		if (id>0) {
+			try {
+				PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+				stmt.setString(1, getDescricao());
+				stmt.setDouble(2, getSaldo());
+				stmt.setDouble(3, getPreco());
+				stmt.setDouble(4, id);
+				int numLin = stmt.executeUpdate();
+				System.out.println("Foram afetadas " + numLin + " linhas");
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	public void apagarRegistro() {
+		String sql = "delete from produto where id = ?";
+		if (id>0) {
+			try {
+				PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+				stmt.setDouble(1, id);
+				int numLin = stmt.executeUpdate();
+				System.out.println("Foram afetadas " + numLin + " linhas");
+				descricao = null;
+				preco = 0;
+				saldo = 0;
+				id = 0;
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	
+ 	public static Produto create(String descricao, double saldo, double preco) throws SQLException {
 		Produto prd = new Produto(descricao,saldo,preco);
 		Connection co = prd.getConn().getConnection();
 		String sql = "insert into produto(descricao,saldo,preco) " + "values (?,?,?)";
@@ -92,6 +132,22 @@ public class Produto {
 			e.printStackTrace();
 		}
 		return prd;
+	}
+	public static Produto consultarProdutoPorId(int pId) {
+		Produto ret = null;
+		try {
+			Connection conn = ConectorBancoDados.getInstancia().getConnection();
+			String sql = "select id, descricao, saldo, preco from produto " + "where id = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, pId);
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()) {
+				ret = parseResultado(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return ret;
 	}
 
 	private static Produto parseResultado(ResultSet rs) 
