@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.classes;
+
+import javafx.scene.Group;
+import javafx.scene.image.Image;
+import javafx.scene.media.AudioClip;
+
+public class Duke extends Group {
+	private Image dukeImage;
+	private Image luvaImage;
+	private AudioClip som;
+
+}

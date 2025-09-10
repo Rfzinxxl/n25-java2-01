@@ -1,0 +1,42 @@
+package br.com.senaisp.bauru.classes;
+
+import javafx.scene.Group;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.media.AudioClip;
+
+public class Duke extends Group {
+	private Image dukeImage;
+	private Image luvaImage;
+	private AudioClip som;
+	private ImageView dukeImgVw;
+	private ImageView luvaImgVw;
+	
+	public Duke() {
+		dukeImage = new Image(getClass().getResource("Images/Duke.png").toString());
+		luvaImage = new Image(getClass().getResource("Images/Glove.png").toString());
+		dukeImgVw = new ImageView(dukeImage);
+		luvaImgVw = new ImageView(luvaImage);
+		som = new AudioClip(getClass().getResource("Audios/Note5.wav").toString());
+		dukeImgVw.setFitWidth(50);
+		dukeImgVw.setPreserveRatio(true);
+		dukeImgVw.setY(10);
+		luvaImgVw.setFitWidth(35);
+		luvaImgVw.setPreserveRatio(true);
+		luvaImgVw.setX(14);
+		getChildren().addAll(dukeImgVw,luvaImgVw);
+		//Criando eventos
+		criacaoEventos();
+	}
+
+	private void criacaoEventos() {
+		setOnMouseClicked((me)->{som.play(); });
+		setOnMouseDragged((me)-> {
+			double largura = 0;//this.getBoundsInLocal().getWidth() / 2;
+			double altura = 0;//this.getBoundsInLocal().getHeight() / 2;
+			setLayoutX(me.getSceneX()-largura);
+			setLayoutY(me.getSceneY()-altura);
+		});
+	}
+
+}
